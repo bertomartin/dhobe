@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'reggaetees'
+set :application, 'dhobe'
 set :deploy_user, 'deploy'
 
 # setup repo details
