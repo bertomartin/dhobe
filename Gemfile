@@ -39,6 +39,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.0'
   gem 'capistrano-cookbook', require: false #helper tasks
   gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
+  gem 'puma'
 end
 
 
@@ -51,6 +52,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pry-rails'
 end
 
 # Added by savoryteam
@@ -66,5 +68,16 @@ gem 'slim'
 
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
+
+#tutsplus
+gem 'autoprefixer-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'country_select'
+
+group :test do
+  gem 'minitest-rails'
+  gem 'factory_girl_rails'
+end
 
 
