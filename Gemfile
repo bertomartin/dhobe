@@ -64,4 +64,7 @@ gem 'sidekiq'
 gem 'sinatra', require: false #both sinatra and slim being used by the sidekiq web interface
 gem 'slim'
 
+# bootstrap
+gem 'bootstrap-sass', '~> 3.3.5'
+
 
