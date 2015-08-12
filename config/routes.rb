@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   resource :cart, only: [:show] do
     post "add", path: "add/:id", on: :member
+    get :checkout
   end
+
+  resources :orders, only: [:index, :show, :create]
 
   root 'products#index'
   mount Sidekiq::Web, at: '/sidekiq'
