@@ -30,7 +30,7 @@ Rails.application.configure do
     :authentication => :plain,
     :enable_starttls_auto => true,
     :port => 587,
-    :domain => "dhobe.com"
+    :domain => "savorylist.com"
   }
 
   # Don't care if the mailer can't send.
