@@ -76,6 +76,7 @@ gem 'mini_magick'
 gem 'country_select'
 
 group :test do
+  gem 'm', '~> 1.3.4'
   gem 'minitest-rails'
   gem 'factory_girl_rails'
 end

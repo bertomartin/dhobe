@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  resources :products
   devise_for :users
   get 'home/index'
 
-  root 'home#index'
+  resource :cart, only: [:show] do
+    post "add", path: "add/:id", on: :member
+  end
+
+  root 'products#index'
   mount Sidekiq::Web, at: '/sidekiq'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
