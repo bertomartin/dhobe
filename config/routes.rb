@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get :checkout
   end
 
-  resources :orders, only: [:index, :show, :create]
+  resources :orders, only: [:index, :show, :create, :update]
 
   root 'products#index'
   mount Sidekiq::Web, at: '/sidekiq'

@@ -1,0 +1,14 @@
+Hello <%= @order.user.name %>,
+
+We wanted to let you know that the following order has been updated.
+
+Previous state: <%= @previous_state %>
+New state: <%= @order.state %>
+
+Here are the products you ordered for order #<%= @order.id %>:
+
+<%- @order.order_items.each do |item| %>
+* <%= item.quantity %> <%= item.product.name %> (<%= number_to_currency item.total_price %>)
+<%- end %>
+
+Total: <%= number_to_currency @order.total_price %>
