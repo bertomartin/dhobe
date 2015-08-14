@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
      :recoverable, :rememberable, :trackable, :validatable,
      :lockable, :confirmable, :async  #,:omniauthable
 
-  validates_presence_of :name, :address, :city, :country, :postal_code
+  #validates_presence_of :name, :address, :city, :country, :postal_code
 
 
   def full_address
